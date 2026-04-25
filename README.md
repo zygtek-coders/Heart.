@@ -71,7 +71,7 @@ The user fills details like:
 - Photo  
 
 **Example:**
-```text
+```
 Type: Document
 Name: Bank Card
 Color: Orange
@@ -194,4 +194,4 @@ Thanks to our dear mentors:
 - 🌸 Carolyne  
 - 🌼 Alice  
 - 🌹 Marion Schleifer  
-```
+
