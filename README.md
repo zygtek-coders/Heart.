@@ -4,7 +4,11 @@
 
 # 🔎 Lost & Found Matching System
 
-A simple web app built with **Flask** to help people report **lost items** and **found items**, then match them automatically.
+💭 Many people come across items they don’t value—sometimes choosing money instead. Others, with kind hearts, try to return them to their rightful owners. Sadly, some sell, destroy, or simply throw them away. Meanwhile, the true owner would give anything to recover what was lost.
+
+📓 Have you ever misplaced your notebook, 🐈 lost your cat, or 📜 an important document like a certificate? To you, these things carry deep meaning. But will everyone care about them if they’re unsure anyone is searching? Will they value them the way you do? Otherwise post it immediately.
+
+This is a simple web app built with **Flask** to help people report **lost items** and **found items**, then match them automatically.
 
 This project can help people recover or report important things like:
 
