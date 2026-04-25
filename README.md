@@ -4,7 +4,7 @@
 
 A simple web app built with Flask to help people report **lost items** and **found items**, then match them automatically.
 
-This project can help people recover important things like:
+This project can help people recover or report important things like:
 
 - National IDs  
 - Bank cards  
@@ -12,7 +12,10 @@ This project can help people recover important things like:
 - Wallets  
 - Documents  
 - Bags  
-- Electronics  
+- Electronics
+- Animal
+- Children
+- Elders  
 
 It can also help people avoid buying stolen or already-reported items.
 
@@ -88,6 +91,7 @@ found/
 preregistered/
 
 If match is found, it shows the result and phone number.
+but futher confirmation must be done, like receipt, serial number, ...
 
 Project Structure
 lost_found/
@@ -111,24 +115,26 @@ lost_found/
     ├── form.html
     ├── matches.html
     └── item.html
+
+
+
 Installation
 
 Clone project:
-
-git clone https://github.com/yourname/lost_found.git
-cd lost_found
+git clone https://github.com/zygtek-coders/Heart..git
+cd Heart.
 
 Install Flask:
-
 pip install flask
 
 Run server:
-
 python app.py
 
 Open browser:
-
 http://127.0.0.1:5000
+
+
+
 Technologies Used
 Python
 Flask
@@ -136,20 +142,29 @@ HTML
 CSS
 JavaScript
 JSON storage
+
+
+
 Why This Project?
 
-In Africa and refugee communities, many people lose:
-
+Everywhere in the world, many people lose:
+ANimals
+Pets
+Children 
 IDs
 Cards
 Phones
 Important documents
+Bags
+Motorcycle
+...
 
 And many people find them but don’t know the owner.
 
 This app reduces stress and saves time.
 
-Future Improvements
+Future Improvements:
+
 SMS notification
 WhatsApp notification
 OCR for IDs and cards
@@ -157,10 +172,12 @@ AI image matching
 **Stolen item blacklist**
 Admin dashboard
 
+
+
 Author:
 Julliane, Shams,  Aime shabani
 
 Thanks to our dear mentors:
-Carolyne
+--Carolyne--
 **Alice** and
-***Marion Schleifer***
+---Marion Schleifer---
