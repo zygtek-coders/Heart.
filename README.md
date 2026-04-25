@@ -1,49 +1,49 @@
-# Heart.
 
-# Lost & Found Matching System
+```markdown
+# 💖 Thanks
 
-A simple web app built with Flask to help people report **lost items** and **found items**, then match them automatically.
+# 🔎 Lost & Found Matching System
+
+A simple web app built with **Flask** to help people report **lost items** and **found items**, then match them automatically.
 
 This project can help people recover or report important things like:
 
-- National IDs  
-- Bank cards  
-- Phones  
-- Wallets  
-- Documents  
-- Bags  
-- Electronics
-- Animal
-- Children
-- Elders  
+- 🪪 National IDs  
+- 💳 Bank cards  
+- 📱 Phones  
+- 👛 Wallets  
+- 📄 Documents  
+- 🎒 Bags  
+- 💻 Electronics  
+- 🐾 Animals & Pets  
+- 👶 Children  
+- 👵 Elders  
 
 It can also help people avoid buying stolen or already-reported items.
 
 ---
 
-## Features
+## ✨ Features
 
-✅ View all lost items  
-✅ View all found items  
-✅ Register **I Lost** item  
-✅ Register **I Found** item  
-✅ Pre-register your item before it gets lost  
-✅ Upload item photo  
-✅ Country → District dropdown  
-✅ Auto matching system  
-✅ Show matched items immediately  
-✅ No login / No account needed  
-✅ No database needed  
-✅ Saves data in folders as JSON files  
+- ✅ View all lost items  
+- ✅ View all found items  
+- ✅ Register **I Lost** item  
+- ✅ Register **I Found** item  
+- ✅ Pre-register your item before it gets lost  
+- ✅ Upload item photo  
+- ✅ Country → District dropdown  
+- ✅ Auto matching system  
+- ✅ Show matched items immediately  
+- ✅ No login / No account needed  
+- ✅ No database needed  
+- ✅ Saves data in folders as JSON files  
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
 ### 1. Visitor opens website
-
 The visitor can see:
-
 - Lost items list  
 - Found items list  
 - Recovered items marked with ⭐ or different color  
@@ -51,9 +51,7 @@ The visitor can see:
 ---
 
 ### 2. User clicks button
-
 The user can choose:
-
 - **I Lost**  
 - **I Found**  
 - **Pre-register Item**  
@@ -61,9 +59,7 @@ The user can choose:
 ---
 
 ### 3. Fill form
-
 The user fills details like:
-
 - Country  
 - District  
 - Type  
@@ -74,26 +70,32 @@ The user fills details like:
 - Phone number  
 - Photo  
 
-Example:
-
+**Example:**
 ```text
 Type: Document
 Name: Bank Card
 Color: Orange
 Status: Active
 Number: 2
-4. System matches item
+```
 
-The server checks if there is similar item in:
+---
 
-lost/
-found/
-preregistered/
+### 4. System matches item
+The server checks if there is a similar item in:
 
-If match is found, it shows the result and phone number.
-but futher confirmation must be done, like receipt, serial number, ...
+- `lost/`  
+- `found/`  
+- `preregistered/`  
 
-Project Structure
+If a match is found, it shows the result and phone number.  
+Further confirmation must be done, like receipt, serial number, etc.
+
+---
+
+## 📂 Project Structure
+
+```
 lost_found/
 │
 ├── app.py
@@ -115,69 +117,81 @@ lost_found/
     ├── form.html
     ├── matches.html
     └── item.html
+```
 
+---
 
-
-Installation
+## 🚀 Installation
 
 Clone project:
+```bash
 git clone https://github.com/zygtek-coders/Heart..git
 cd Heart.
+```
 
 Install Flask:
+```bash
 pip install flask
+```
 
 Run server:
+```bash
 python app.py
+```
 
 Open browser:
+```
 http://127.0.0.1:5000
+```
 
+---
 
+## 🛠️ Technologies Used
 
-Technologies Used
-Python
-Flask
-HTML
-CSS
-JavaScript
-JSON storage
+- Python  
+- Flask  
+- HTML  
+- CSS  
+- JavaScript  
+- JSON storage  
 
+---
 
-
-Why This Project?
+## 💡 Why This Project?
 
 Everywhere in the world, many people lose:
-ANimals
-Pets
-Children 
-IDs
-Cards
-Phones
-Important documents
-Bags
-Motorcycle
-...
+- 🐕 Animals & Pets  
+- 👶 Children  
+- 🪪 IDs & Cards  
+- 📱 Phones  
+- 📄 Important documents  
+- 🎒 Bags  
+- 🏍️ Motorcycles  
 
-And many people find them but don’t know the owner.
-
+And many people find them but don’t know the owner.  
 This app reduces stress and saves time.
 
-Future Improvements:
+---
 
-SMS notification
-WhatsApp notification
-OCR for IDs and cards
-AI image matching
-**Stolen item blacklist**
-Admin dashboard
+## 🔮 Future Improvements
 
+- 📩 SMS notification  
+- 💬 WhatsApp notification  
+- 🔎 OCR for IDs and cards  
+- 🤖 AI image matching  
+- 🚫 Stolen item blacklist  
+- 🖥️ Admin dashboard  
 
+---
 
-Author:
-Julliane, Shams,  Aime shabani
+## 👥 Author
 
-Thanks to our dear mentors:
---Carolyne--
-**Alice** and
----Marion Schleifer---
+- Julliane  
+- Shams  
+- Aime Shabani  
+
+Thanks to our dear mentors:  
+- 🌸 Carolyne  
+- 🌼 Alice  
+- 🌹 Marion Schleifer  
+```
