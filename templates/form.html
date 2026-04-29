@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ mode|capitalize }} Item</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to right, rgba(255,0,0,.3), rgba(255,0,90,.3)), url("/static/b11.png");
+            color: wheat;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 300px;
+            margin: 40px auto;
+            background: rgba(255,255,255,.3);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            align-items: right;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #f75000;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #50ff50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #507b50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>
+            {% if mode == "lost" %}
+                Report Lost Item
+            {% elif mode == "found" %}
+                Report Found Item
+            {% else %}
+                Pre-Register Item
+            {% endif %}
+        </h2>
+
+        <form action="/register/{{ mode }}" method="POST" enctype="multipart/form-data">
+
+            <!-- Country -->
+            <select name="country" id="country" required onchange="updateDistricts()">
+                <option value="">Select Country</option>
+                {% for country in schema.keys() %}
+                    <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select>
+
+            <!-- District -->
+            <select name="district" id="district" required>
+                <option value="">Select District</option>
+            </select>
+
+            <!-- Type -->
+            <select name="type" required>
+                <option value="">Select Item Type</option>
+                {% for t in types %}
+                    <option value="{{ t }}">{{ t }}</option>
+                {% endfor %}
+            </select>
+
+            <!-- Name -->
+            <input type="text" name="name" placeholder="Brand / Model / Name" required>
+
+            <!-- Color -->
+            <input type="text" name="color" placeholder="Color">
+
+            <!-- Number -->
+            <input type="number" name="number" placeholder="Number / Quantity" value="1">
+
+            <!-- Status -->
+            <input type="text" name="status" placeholder="Status" value="active">
+
+            <!-- Phone -->
+            <input type="text" name="phone" placeholder="Your Phone Number" required>
+
+            <!-- Description -->
+            <textarea name="description" placeholder="Describe the item"></textarea>
+
+            <!-- Photo -->
+            <input type="file" name="photo">
+
+            <button type="submit">
+                {% if mode == "lost" %}
+                    Submit Lost Item
+                {% elif mode == "found" %}
+                    Submit Found Item
+                {% else %}
+                    Pre-Register Item
+                {% endif %}
+            </button>
+
+        </form>
+    </div>
+
+    <script>
+        const schema = {{ schema|tojson }};
+
+        function updateDistricts() {
+            const country = document.getElementById("country").value;
+            const districtSelect = document.getElementById("district");
+
+            districtSelect.innerHTML = '<option value="">Select District</option>';
+
+            if (schema[country]) {
+                schema[country].forEach(function(district) {
+                    const option = document.createElement("option");
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+
+</body>
+
+</html>

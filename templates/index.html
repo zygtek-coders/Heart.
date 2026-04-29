@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>❤Heart</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(250,0,0,0)) ,url("/static/w55.jpg");
+            font-family: Arial, sans-serif;
+<!--            background: burlywood;-->
+            margin: 0;
+        }
+
+        .navbar {
+            background: #000;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .top-buttons {
+            text-align: center;
+            margin: 15px;
+        }
+
+        .top-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #ff8090;
+            color: white;
+            font-size: 16px;
+        }
+
+        .top-buttons button:hover {
+            background: #0056b3;
+        }
+
+        .search-box {
+            text-align: center;
+            margin: 15px;
+            width: 70%;
+        }
+
+        .search-box input {
+            width: 60%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-box button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: green;
+            color: white;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+        }
+        h2 {
+            border: 1px solid rgba(240,240,255,0) ;
+            background-image: linear-gradient(to right,rgba(240,240,255,.7),rgba(240,240,255,0), rgba(240,240,255,0));
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+
+
+        .items-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .items-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .items-container::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 5px;
+        }
+
+        .card {
+            min-width: 200px;
+            max-width: 200px;
+            background: rgba(255,255,255,.3);
+            border-radius: 10px;
+            border: 2px solid white;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-box {
+            position: relative;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: orange;
+            color: white;
+            font-size: 12px;
+            padding: 4px 6px;
+            border-radius: 5px;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        .card-content h3 {
+            margin: 5px 0;
+        }
+
+        .card-content p {
+            margin: 3px 0;
+            color: #555;
+        }
+
+        .empty {
+            text-align: center;
+            color: white;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+
+
+
+
+        .main.full {
+                margin-left: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background: #0f172a;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+
+        .sidebar.collapsed {
+            transform: translateX(-100%);
+        }
+
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+
+        .sidebar nav a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            transition: 0.2s;
+        }
+
+        .sidebar nav a:hover {
+            background: #1e293b;
+            color: white;
+        }
+
+        .sidebar nav a.active {
+            background: #2563eb;
+            color: white;
+        }
+
+
+        .main {
+            margin-left: 220px;
+            width: 100%;
+        }
+
+
+        .topbar {
+<!--            background-image:  linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.1),rgba(0,0,0,.2), rgba(0,0,0,.3), rgba(0,0,0,.4)) ,url("/static/b2.jpeg");-->
+            padding: 15px;
+<!--            display: flex;-->
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 20px 6px rgba(0,0,0,0.5);
+        }
+
+
+        .menu-btn {
+            font-size: 18px;
+            border: 3px solid rgba(0,0,0,.2);
+<!--            border-radius: 8px;-->
+            background: None;
+            cursor: pointer;
+
+        }
+
+
+        .content {
+            padding: 20px;
+        }
+
+        a {
+            font-family: "Times New Roman";
+            }
+
+        .footer-bottom {
+            border-top: 1px solid #30363d;
+            margin-top: 20px;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.6;
+            color: grey;
+        }
+
+
+
+    </style>
+</head>
+
+
+    <body>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">❤️</h2>
+
+            <nav>
+                <a href="#" class="active">🏠 Home</a>
+                <a  href="#" onclick="openForm('found'); return false;">🔍I FOUND</a>
+                <a href="#" onclick="openForm('lost'); return false;">📱 I Lost</a>
+                <a href="#" onclick="window.location.href='/register/preregister'; return false">♾️ PRE-REGISTER</a>
+                <a href="#">📄 My Reports</a>
+
+
+                <!-- <button onclick="openForm('lost')">I LOST</button>
+                <button onclick="openForm('found')">I FOUND</button>
+                <button onclick="window.location.href='/register/preregister'">PRE-REGISTER</button> -->
+
+
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="main">
+
+            <header class="topbar">
+                <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+                <h3 style="color: rgba(255,245,245,.9);">Every heartbeat <b>matters</b></h3>
+                <small style="color: lightgrey;">A caring platform that helps recover lost and found items,returning them safely to the hearts they belong to. </small>
+
+
+
+                <div class="search-box">
+                    <form action="/search" method="POST">
+                        <input type="text" name="query" placeholder="Search by name, Country, district, item..." required>
+                        <button type="submit">Search</button>
+<!--                        <p style="color: lightgrey; font family: Segoe,sans-serif; font-size:18px;">Every heartbeat matters.</p>-->
+<!--                        <p style="color: lightgrey; font family: Segoe,sans-serif; font-size:18px;">A caring platform that helps recover lost and found items,returning them safely to the hearts they belong to.</p>-->
+                    </form>
+                </div>
+            </header>
+
+            <section class="content">
+
+                <!-- LOST ITEMS -->
+                <section class="section">
+                    <h2>Lost Items</h2>
+
+                    {% set lost_items = items|selectattr("mode","equalto","lost")|list %}
+
+                    {% if lost_items %}
+                    <div class="items-container">
+                        {% for item in lost_items %}
+                        <div class="card">
+                            <div class="image-box">
+                                {% if item.photo %}
+                                <img src="/uploads/{{ item.photo }}">
+                                {% else %}
+                                <img src="https://via.placeholder.com/200x150">
+                                {% endif %}
+                                <span class="badge">Lost</span>
+                            </div>
+
+                            <div class="card-content">
+                                <h3>{{ item.type }}</h3>
+                                <p style="color: cyan;">{{ item.district }}</p>
+                                <p style="color: pink;">{{ item.color }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="empty">No data registered yet</div>
+                    {% endif %}
+                </section>
+
+                <!-- FOUND ITEMS -->
+                <section class="section">
+                    <h2>Found Items</h2>
+
+                    {% set found_items = items|selectattr("mode","equalto","found")|list %}
+
+                    {% if found_items %}
+                    <div class="items-container">
+                        {% for item in found_items %}
+                        <div class="card">
+                            <div class="image-box">
+                                {% if item.photo %}
+                                <img src="/uploads/{{ item.photo }}">
+                                {% else %}
+                                <img src="https://via.placeholder.com/200x150">
+                                {% endif %}
+                                <span class="badge" style="background: green;">Found</span>
+                            </div>
+
+                            <div class="card-content">
+                                <h3>{{ item.type }}</h3>
+                                <p style="color: magenta;">{{ item.district }}</p>
+                                <p style="color: rgba(255,255,200);">{{ item.color }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="empty">No data registered yet</div>
+                    {% endif %}
+                </section>
+
+
+            </section>
+
+        </div>
+
+        <script>
+            function openForm(type) {
+                window.location.href = "/register/" + type;
+            }
+
+            function toggleSidebar() {
+                    const sidebar = document.querySelector('.sidebar');
+                    const main = document.querySelector('.main');
+
+                    sidebar.classList.toggle('collapsed');
+                    main.classList.toggle('full');
+                }
+    <!--        function toggleSidebar() {-->
+    <!--            document.querySelector('.sidebar').classList.toggle('collapsed');-->
+    <!--        }-->
+        </script>
+
+    <footer>
+
+          <!-- Bottom -->
+          <div class="footer-bottom">
+
+              <h3>Contact</h3>
+              <p>Email: aimeshabani@gmail.com</p>
+              <p>Phone: +256 788 835 687</p>
+              <p>Uganda</p>
+            <p>&copy; 2026 Heart. All rights reserved.</p>
+  </div>
+</footer>
+
+
+    </body>
+
+
+
+
+</html>
